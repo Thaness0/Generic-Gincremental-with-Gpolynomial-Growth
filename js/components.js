@@ -198,15 +198,17 @@ function load() {
 }
 
 function reset() {
-    confirm("Are you sure you want to reset?")
-    localStorage.setItem("gipg", JSON.stringify(startState))
-    window.location.reload()
+    if (confirm("Are you sure you want to reset?")){
+        localStorage.setItem("gipg", JSON.stringify(startState))
+        window.location.reload()
+    }
 }
 
 function buttonLoad() {
-    confirm("Are you sure you want to load an earlier save?")
-    load()
-    window.location.reload()
+    if (confirm("Are you sure you want to load an earlier save?")){
+        load()
+        window.location.reload()
+    }
 }
 
 function saveTimer(diff) {
