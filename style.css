@@ -59,6 +59,7 @@ button:hover {
     top: 0px;
     font-size: 35px;
     display: flex;
+    
 }
 
 .topBar span {
@@ -130,5 +131,25 @@ aside {
     font-size: 20px;
 }
 .prestigeUpgradeContainer button:hover{
+    scale: 1.05;
+}
+
+.empowerButton {
+    border-color: var(--palette-add-dark-pink);
+    color: var(--palette-add-light-pink);
+}
+
+.empowermentContainer button {
+    background-color: var(--palette-add-black);
+    color: var(--palette-add-pink-white);
+    border: 3px solid var(--palette-add-pink);
+    border-radius: 25px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 4px;
+    user-select: none;
+    font-size: 18px;
+}
+.empowermentContainer button:hover{
     scale: 1.05;
 }
