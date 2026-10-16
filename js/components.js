@@ -160,6 +160,7 @@ function DecimalConverter() {
 
     for (i=0;i<player.prestige.totalUpgrades;i++) {
         let loader = new upgrade()
+        loader.name = player.prestige.upgrades[i].name
         loader.bought = new Decimal(player.prestige.upgrades[i].bought)
         loader.effect = new Decimal(player.prestige.upgrades[i].effect)
         loader.cost = new Decimal(player.prestige.upgrades[i].cost)
@@ -168,6 +169,7 @@ function DecimalConverter() {
 
     for (i=0;i<player.empower.totalPerks;i++) {
         let loader = new perk()
+        loader.name = player.empower.perks[i].name
         loader.effect = new Decimal(player.empower.perks[i].effect)
         loader.cost = new Decimal(player.empower.perks[i].cost)
         player.empower.perks[i] = loader
