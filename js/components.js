@@ -169,6 +169,7 @@ function DecimalConverter() {
 
     for (i=0;i<player.empower.totalPerks;i++) {
         let loader = new perk()
+        loader.bought = player.empower.perks[i].bought
         loader.name = player.empower.perks[i].name
         loader.effect = new Decimal(player.empower.perks[i].effect)
         loader.cost = new Decimal(player.empower.perks[i].cost)
