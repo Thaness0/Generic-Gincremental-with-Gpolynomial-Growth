@@ -7,32 +7,39 @@
 </head>
 <body>
     <div class="topBar">
-        <span id="moneyTracker" style="color: var(--palette-carobTreat-off-yellow);">$10 (1/s)</span> <span id="prestigeTracker" style="color: var(--palette-add-green);"> ✧69</span> <span id="empowerTracker" style="color: var(--palette-add-pink);"> ∅69</span>
+        <span id="moneyTracker" style="color: var(--palette-carobTreat-off-yellow);">$10 (1/s)</span><br> <span id="prestigeTracker" style="color: var(--palette-add-green);"> ✧69</span><br> <span id="empowerTracker" style="color: var(--palette-add-pink);"> ∅69</span>
     </div>
 
     <aside>
-        <button onclick="changeTab('mainTab')">Main</button> <br>
-        <button onclick="changeTab('optionsTab')" style="border-color: var(--palette-carobTreat-off-white);color: var(--palette-carobTreat-off-white)">options</button>
+        <button onclick="changeTab('mainTab')" >Main</button> <br>
+        <button onclick="changeTab('prestigeTab')" style="border-color: var(--palette-add-dark-green); color: var(--palette-add-light-green);">Prestige</button> <br>
+        <button onclick="changeTab('empowerTab')" style="border-color: var(--palette-add-pink); color: var(--palette-add-light-pink)">Empower</button> <br>
+        <button onclick="changeTab('optionsTab')" style="border-color: var(--palette-carobTreat-off-white);color: var(--palette-carobTreat-off-white)">options</button> <br>
     </aside>
 
 
     <div class="tabSection">
 
         <div class="tab" id="mainTab" style="display: block;">
-            <div style="float: left;">
+            
             <div class="generatorContainer">
-                 <button onclick="(player.generators[0].buy())">+</button> <span id="generatorTracker0">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
-                 <button onclick="(player.generators[1].buy())">+</button> <span id="generatorTracker1">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
-                 <button onclick="(player.generators[2].buy())">+</button> <span id="generatorTracker2">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
-                 <button onclick="(player.generators[3].buy())">+</button> <span id="generatorTracker3">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
-                 <button onclick="(player.generators[4].buy())">+</button> <span id="generatorTracker4">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
-                 <button onclick="(player.generators[5].buy())">+</button> <span id="generatorTracker5">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
-                 <button onclick="(player.generators[6].buy())">+</button> <span id="generatorTracker6">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
-                 <button onclick="(player.generators[7].buy())">+</button> <span id="generatorTracker7">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
-                 <button onclick="(player.generators[8].buy())">+</button> <span id="generatorTracker8">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
+                <span id="generatorTracker0" onclick="(player.generators[0].buy())">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
+                <span id="generatorTracker1" onclick="(player.generators[1].buy())">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
+                <span id="generatorTracker2" onclick="(player.generators[2].buy())">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
+                <span id="generatorTracker3" onclick="(player.generators[3].buy())">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
+                <span id="generatorTracker4" onclick="(player.generators[4].buy())">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
+                <span id="generatorTracker5" onclick="(player.generators[5].buy())">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
+                <span id="generatorTracker6" onclick="(player.generators[6].buy())">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
+                <span id="generatorTracker7" onclick="(player.generators[7].buy())">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
+                <span id="generatorTracker8" onclick="(player.generators[8].buy())">Generator 1 | amount: 69 + 420 (69/s) | cost: 69420 </span><br>
 
             </div><br>
             <button class="prestigeButton" id="prestigeButtonInfo" onclick="(prestige())">Prestige for ✧69 <br> will reset generators and $</button><br>
+            <button class="empowerButton" id="empowerButtonInfo" onclick="(empowerPrestige())">Reset for ∅420 <br> will reset generators and $</button><br>
+            
+        </div>
+
+        <div class="tab" id="prestigeTab" style="display: none;">
             <div class="prestigeUpgradeContainer">
                 <button id="prestigeUpgrade0" onclick="player.prestige.upgrades[0].buy()">Money Boost<br> increases money gain by <b>6.9X<br>Cost: ✧69</b></button> 
                 <button id="prestigeUpgrade1" onclick="player.prestige.upgrades[1].buy()">Generator Boost<br> increases Generator gain by <b>1.42X<br>Cost: ✧420</b></button> 
@@ -47,9 +54,9 @@
                 <button id="prestigeUpgrade8" onclick="player.prestige.upgrades[8].buy()">Keep Generators<br> increases the amount of generators kept on prestige <b>1.42X<br>Cost: ✧69420</b></button>
 
             </div><br>
-            </div>
-            <div style="float: left;">
-            <button class="empowerButton" id="empowerButtonInfo" onclick="(empowerPrestige())">Reset for ∅420 <br> will reset generators and $</button><br>
+        </div>
+
+        <div class="tab" id="empowerTab" style="display: none;">
             <span id="empowermentInfo" style="color: var(--palette-add-light-pink);">these empowerments are based on your ∅</span>
             <div class="empowermentContainer">
                 <button id="empowerPerk0" onclick="player.empower.perks[0].buy()">Empower Money<br> empowers money gain by<b>69X<br>Cost: ∅42</b></button><br>
@@ -57,8 +64,6 @@
                 <button id="empowerPerk2" onclick="player.empower.perks[2].buy()">Empower Prestige<br> empowers prestige gain by<b>69X<br>Cost: ∅42</b></button><br>
                 <button id="empowerPerk3" onclick="player.empower.perks[3].buy()">Empower Prestige upgrades<br> empowers first 5 prestige upgrades by<b>69X<br>Cost: ∅42</b></button><br>
             </div><br>
-            </div>
-            
         </div>
 
         <div class="tab" id="optionsTab" style="display: none;">

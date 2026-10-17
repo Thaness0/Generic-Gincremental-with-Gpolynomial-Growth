@@ -38,7 +38,7 @@ button {
     border-radius: 15px;
     background-color: var(--palette-add-black);
     color: var(--palette-carobTreat-off-yellow);
-    font-size: 30px;
+    font-size: 25px;
     padding: 4px;
     padding-left: 12px;
     padding-right: 12px;
@@ -59,7 +59,6 @@ button:hover {
     left: 0px;
     top: 0px;
     font-size: 35px;
-    display: flex;
     
 }
 
@@ -72,9 +71,12 @@ aside {
     float: left;
     margin-right: 12px;
     height: 100%;
-    min-width: 10%;
+    min-width: 5%;
     background-color: var(--palette-carobTreat-dark-brown);
     border-right: 2px solid var(--palette-carobTreat-beige);
+}
+aside button {
+    font-size: 20px;
 }
 
 .tab {
@@ -86,32 +88,23 @@ aside {
 .tabSection {
     display:block;
     float:left;
-    width:85%;
+    width:65%;
     
 }
 
-.generatorContainer button {
-    background-color: var(--palette-add-black);
-    color: var(--palette-carobTreat-off-white);
-    border: 2px solid var(--palette-carobTreat-light-brown);
-    border-radius: 25px;
-    padding-right: 16px;
-    padding-left: 16px;
-    margin: 4px;
-    user-select: none;
-}
 
 .generatorContainer span {
     border-bottom: 2px solid var(--palette-carobTreat-light-beige);
     border-top: 2px solid var(--palette-carobTreat-beige);
     border-radius: 25px;
+    display: flex;
     padding: 8px;
     margin: 4px;
     user-select: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.generatorContainer button:hover{
+.generatorContainer span:hover{
     scale: 1.05;
 }
 
